@@ -39,7 +39,7 @@
         return this.restTemplate.getForObject("http://caicloud-provider:8081/health/服务提供者-" + id, String.class);
     }
 
-    @GetMapping("/local/{url}/{name}")
+    @GetMapping("/local/{url}/{port}/{name}")
     public String findBybId(@PathVariable String url,  @PathVariable String port, @PathVariable String name) {
         return this.restTemplate.getForObject("http://"+url+":"+port +"/health/服务提供者-" + name, String.class);
     } 
